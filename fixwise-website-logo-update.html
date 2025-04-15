@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixWise</title>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <style>
+    :root {
+      --primary-color: #002b36;
+      --accent-color: #ffd700;
+      --text-color: #ffffff;
+      --table-bg: #003b4d;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+    header {
+      background-color: var(--primary-color);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img.logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 240px;
+    }
+    .cta-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #e6c200;
+    }
+    .agreement-check {
+      margin-top: 20px;
+      font-size: 0.95em;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #003b4d;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      color: #fff;
+    }
+    .modal-close {
+      color: #ffd700;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid var(--text-color);
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--table-bg);
+    }
+    td a {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+    td a:hover {
+      color: #e6c200;
+    }
+    .notice {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-top: 1em;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background-color: var(--primary-color);
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="FixWise Logo" class="logo">
+    <p>Smart Help for Smart Homeowners — One Video Call Away</p>
+    <a href="#" class="cta-button" onclick="return launchBooking('https://calendly.com/fixwisehelp/quick-fix-call')">Book 15 Min Call</a>
+    <a href="#" class="cta-button" onclick="return launchBooking('https://calendly.com/fixwisehelp/30min')">Book 30 Min Call</a>
+    <a href="#" class="cta-button" onclick="return launchBooking('https://calendly.com/fixwisehelp/deep-dive')">Book 60 Min Call</a>
+    <a href="#" class="cta-button" onclick="return launchBooking('https://calendly.com/fixwisehelp/emergency-help')">Book Emergency Call</a>
+    <div class="agreement-check">
+      <label><input type="checkbox" id="agreement"> I agree to the <a href="#" onclick="showModal(); return false;">terms and payment policy</a>.</label>
+    </div>
+  </header>
+</body>
+</html>
